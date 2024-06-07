@@ -1,0 +1,110 @@
+/* PC  */
+@media screen and (min-width: 992px) {
+  .menu-draw {
+    display: none;
+  }
+}
+
+/* Tablet and mobile  */
+@media screen and (max-width: 991px) {
+  .navbar {
+    position: relative;
+  }
+
+  .navbar .logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .toggle-menu {
+    width: 24px;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-draw {
+    position: fixed;
+    inset: 0 40% 0 0;
+    background: #ffffff;
+    z-index: 3;
+    transform: translateX(-100%);
+    padding: 16px 0 0 16px;
+    transition: all 0.4s ease;
+  }
+
+  .menu-draw.active {
+    transform: translateX(0);
+  }
+
+  .menu-draw ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .menu-draw li a {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4f5361;
+  }
+
+  .menu-draw li a.mobile-btn {
+    display: none;
+  }
+
+  .menu-draw li a:active {
+    opacity: 0.5;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  .hero .info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .client .images {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+/* Tablet  */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+}
+
+/* Mobile  */
+@media screen and (max-width: 767px) {
+  .toggle-menu {
+    position: absolute;
+    left: 0;
+  }
+
+  .navbar .actions {
+    display: none;
+  }
+}
